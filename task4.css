@@ -1,0 +1,56 @@
+@media (min-width: 950.1px) {
+body {
+    margin: 0%;
+    padding: 0%;
+    background-color: rgb(16, 179, 220);
+    }
+.parent {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 15%;
+}
+@keyframes rotation {
+    from {
+        transform: rotate(45deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+    }
+    .subParent  div {
+        padding: 3%;
+        margin: 1%;
+        text-align: center;
+        background-color: rgb(33, 33, 33);
+    }
+    .parent .subParent .div1 {
+        grid-area: 1;
+    }
+    .parent .subParent .div2 {
+        grid-area: 2;
+    }
+    .parent .subParent .div3 {
+        grid-area: 3;
+    }
+    .parent .subParent .div4 {
+        grid-area: 4;
+    }
+    .parent .subParent .div5 {
+        grid-area: 5;
+    }
+
+.subParent {
+    display: grid;
+    grid-template-areas:
+        "1 2 2"
+        "1 3 4"
+        "5 5 4";
+    color: white;
+    width: 20rem;
+    height: 20rem;
+    animation: rotation 10s infinite linear;
+}
+}
+
